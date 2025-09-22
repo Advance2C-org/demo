@@ -1,0 +1,14 @@
+name: Secret Scan Test
+
+on: [push]
+
+jobs:
+  leak-token:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Set fake token (for secret scanning test only)
+        env:
+          GITHUB_TOKEN_EXAMPLE: ghp_TEST_EXAMPLE_TOKEN_DO_NOT_USE_0123456789
+        run: |
+          echo "This step intentionally contains a hard-coded token string to exercise secret scanning."
+          # Remove this test token
