@@ -1,15 +1,12 @@
----
-version: 2
-updates:
-  - package-ecosystem: "github-actions"
-    directory: "/"
-    schedule:
-      interval: "weekly"
-  - package-ecosystem: npm
-    directory: "/javascript"
-    schedule:
-      interval: "weekly"
-  - package-ecosystem: bundler
-    directory: "/ruby"
-    schedule:
-      interval: "weekly"
+  version: 2
+  updates:     
+       - package-ecosystem: "npm"
+         directory: "/"
+         schedule: object
+         interval: daily #"cron"
+      # This cron expression means "every 10 minutes"
+      # * /10 * * * *
+      # (minute) (hour) (day of month) (month) (day of week)
+     # cron: " * /1 * * * *"
+        #  interval: "daily"          
+         target-branch: "TEST" # Explicitly target the main branch
