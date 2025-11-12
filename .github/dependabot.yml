@@ -1,7 +1,6 @@
- version: 2
-  updates:     
-       - package-ecosystem: "npm"
-         directory: "/"
-         schedule:
-           interval: "daily"        
-       - target-branch: "TEST" # Explicitly target the main branch
+version: 2
+updates:
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "daily"
