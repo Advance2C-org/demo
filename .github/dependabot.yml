@@ -1,12 +1,7 @@
-  version: 2
+ version: 2
   updates:     
        - package-ecosystem: "npm"
          directory: "/"
-         schedule: object
-         interval: daily #"cron"
-      # This cron expression means "every 10 minutes"
-      # * /10 * * * *
-      # (minute) (hour) (day of month) (month) (day of week)
-     # cron: " * /1 * * * *"
-        #  interval: "daily"          
-         target-branch: "TEST" # Explicitly target the main branch
+         schedule:
+           interval: "daily"        
+       - target-branch: "TEST" # Explicitly target the main branch
